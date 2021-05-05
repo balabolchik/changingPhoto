@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/index.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Changing Photo</title>
 </head>
 <body>
-    
+    <button onclick="showChangingPhoto()">Changing Photo</button>
+    <div onclick="closeChangingPhotoWindow(event)" id="changingPhotoWindow">
+        <div>
+            <div id="photo">
+                <!-- <img class="avatar" src="img/user.png" alt="Avatar"> -->
+                <input id="choosePhoto" type="file" accept=".jpg, .png" onchange="changeAvatar(this.files)">
+            </div>
+            <div id="buttons">
+                <button>Save</button>
+                <button>Cancel</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/index.js"></script>
 </body>
 </html>

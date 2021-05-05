@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+#changingPhotoWindow {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: calc(100vh + 10px);
+    background-color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+#changingPhotoWindow.changing {
+    animation: wievChangingPhotoWindow .5s ease 0s 1;
+}
+
+#changingPhotoWindow > div {
+    cursor: default;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    margin: 10vh auto 10vw;
+    padding: 15px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 30px;
+    grid-gap: 10px;
+}
+
+#photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    height: 80%;
+    
+}
+@media (max-aspect-ratio: 1/1) {
+    .avatar {
+        width: 80%;
+        height: auto;
+    }
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+#buttons * {
+    width: 47%;
+}
+
+#choosePhoto {
+    display: none;
+}
+
+@keyframes wievChangingPhotoWindow {
+    0% {
+        display: none;
+        top: -10px;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0.01;
+    }
+    100% {
+        opacity: 1;
+    }
+}
