@@ -10,8 +10,17 @@ function closeChangingPhotoWindow (event) {
     
 }
 
-// document.getElementById('choosePhoto').addEventListener('change', changeAvatar);
+const input = document.getElementById('choosePhoto');
 
-function changeAvatar (photos) {
+input.addEventListener('change', () => {changeAvatar(input.files[0])});
+
+function changeAvatar (photo) {
     debugger
+    let reader = new FileReader();
+    reader.readAsDataURL(photo);
+    reader.onload = function(e) {
+        document.getElementById('photo').innerHTML = `<img class='avatar' src='${e.target.result}'>`;
+        document.getElementById('photo').classList.add('photoIs');
+    }
+    console.log('Bye');
 }

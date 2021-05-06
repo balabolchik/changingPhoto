@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <title>Changing Photo</title>
 </head>
 <body>
@@ -12,8 +14,14 @@
     <div onclick="closeChangingPhotoWindow(event)" id="changingPhotoWindow">
         <div>
             <div id="photo">
-                <!-- <img class="avatar" src="img/user.png" alt="Avatar"> -->
-                <input id="choosePhoto" type="file" accept=".jpg, .png" onchange="changeAvatar(this.files)">
+                <label>
+                    <div>
+                        <div>
+                            <i class="fas fa-file-download"></i>
+                        </div>
+                        <input id="choosePhoto" type="file" accept=".jpg, .png">
+                    </div>
+                </label>
             </div>
             <div id="buttons">
                 <button>Save</button>
